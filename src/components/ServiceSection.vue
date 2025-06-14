@@ -2,86 +2,205 @@
   <section class="service-section">
     <h2 class="section-title">我们的服务</h2>
     <div class="section-en">SERVICES</div>
-    <div class="service-list">
-      <div class="service-card" v-for="(item, idx) in services" :key="idx">
-        <el-icon :size="32" class="service-icon">
-          <component :is="item.icon" />
-        </el-icon>
-        <div class="service-title">{{ item.title }}</div>
-        <div class="service-desc">{{ item.desc }}</div>
-        <!-- TODO: 服务卡片图片资源 -->
+    <p class="section-desc">
+      淘鱼科技近几年APP外包开发经验，为企业提供专业的APP软件开发、电商平台开发、高端网站制作、小程序商城开发等服务，服务企业超过100家
+    </p>
+
+    <div class="service-grid">
+      <!-- APP定制开发 -->
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <img src="/service/1.png" alt="APP定制开发" />
+        </div>
+        <h3 class="card-title">APP定制开发</h3>
+        <div class="card-items">
+          <p>uni-app开发</p>
+          <p>原生iOS\安卓APP开发</p>
+          <p>涵盖数十个行业数百个成功案例</p>
+        </div>
+      </div>
+
+      <!-- 小程序制作 -->
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <img src="/service/1.png" alt="小程序制作" />
+        </div>
+        <h3 class="card-title">小程序制作</h3>
+        <div class="card-items">
+          <p>小程序定制开发</p>
+          <p>微信公众号定制开发</p>
+          <p>基于微信的H5应用定制开发</p>
+        </div>
+      </div>
+
+      <!-- 高端网页制作 -->
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <img src="/service/1.png" alt="高端网页制作" />
+        </div>
+        <h3 class="card-title">高端网页制作</h3>
+        <div class="card-items">
+          <p>电商类网站开发</p>
+          <p>高端企业官网设计与制作</p>
+          <p>PC端\手机端响应式网站设计</p>
+        </div>
+      </div>
+
+      <!-- IOT物联网和智能硬件解决方案 -->
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <img src="/service/1.png" alt="IOT物联网" />
+        </div>
+        <h3 class="card-title">IOT物联网和智能<br/>硬件解决方案</h3>
+        <div class="card-items">
+          <p>智能电器类开发</p>
+          <p>智能校园</p>
+        </div>
+      </div>
+
+      <!-- 软件定制开发 -->
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <img src="/service/1.png" alt="软件定制开发" />
+        </div>
+        <h3 class="card-title">软件定制开发</h3>
+        <div class="card-items">
+          <p>小程序</p>
+          <p>H5</p>
+          <p>兼容APP</p>
+        </div>
+      </div>
+
+      <!-- 全渠道电商营销 -->
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <!-- TODO: 电商图标 -->
+          <img src="/service/1.png" alt="全渠道电商营销" />
+        </div>
+        <h3 class="card-title">全渠道电商营销</h3>
+        <div class="card-items">
+          <p>小程序</p>
+          <p>H5</p>
+          <p>兼容APP</p>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { Monitor, Iphone, Cloudy, ShoppingCart, DataAnalysis, Tools } from '@element-plus/icons-vue'
-const services = [
-  { icon: Monitor, title: '网站建设', desc: '企业官网、品牌网站定制开发' },
-  { icon: Iphone, title: '小程序开发', desc: '微信/支付宝/抖音小程序开发' },
-  { icon: Cloudy, title: '云服务', desc: '云主机、云存储、云安全等服务' },
-  { icon: ShoppingCart, title: '电商平台', desc: 'B2B/B2C/O2O电商平台开发' },
-  { icon: DataAnalysis, title: '数据分析', desc: '大数据可视化与分析平台' },
-  { icon: Tools, title: '系统集成', desc: '企业信息化系统集成' },
-]
 </script>
 
 <style lang="scss" scoped>
 @use '../styles/variables.scss' as *;
+
 .service-section {
   width: 100%;
-  background: #fff;
-  padding: 64px 0 48px 0;
+  padding: 80px 0;
+  background: #f5f7fa;
   text-align: center;
+
   .section-title {
-    font-size: 32px;
+    font-size: 36px;
     color: $color-secondary;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 14px;
   }
+
   .section-en {
-    font-size: 18px;
-    color: $color-dark;
-    opacity: 0.7;
-    margin-bottom: 32px;
+    font-size: 20px;
+    color: $color-secondary;
+    opacity: 0.6;
+    margin-bottom: 24px;
   }
-  .service-list {
+
+  .section-desc {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    font-size: $font-size-text;
+    line-height: 1.8;
+    color: $color-dark;
+    opacity: 0.8;
+  }
+
+  .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    max-width: $main-width;
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    .service-card {
-      background: #f8faff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(91,157,248,0.06);
-      padding: 32px 16px 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: box-shadow 0.2s;
-      &:hover {
-        box-shadow: 0 4px 24px rgba(91,157,248,0.12);
+    padding: 0 20px;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+      .icon-wrapper {
+        img {
+          transform: scale(1.1);
+        }
       }
-      .service-icon {
-        color: $color-primary;
-        margin-bottom: 16px;
+    }
+
+    .icon-wrapper {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
       }
-      .service-title {
-        font-size: 20px;
-        color: $color-secondary;
-        font-weight: 600;
-        margin-bottom: 8px;
-      }
-      .service-desc {
+    }
+
+    .card-title {
+      font-size: 24px;
+      color: $color-secondary;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .card-items {
+      p {
         font-size: 16px;
         color: $color-dark;
         opacity: 0.8;
+        margin-bottom: 8px;
         line-height: 1.6;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
 }
-</style> 
+
+@media (max-width: 1200px) {
+  .service-section {
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .service-section {
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+</style>

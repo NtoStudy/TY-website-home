@@ -1,73 +1,180 @@
 <template>
   <section class="advantage-section">
     <h2 class="section-title">我们的优势</h2>
-    <div class="section-en">ADVANTAGES</div>
-    <div class="advantage-circle">
-      <div class="advantage-item" v-for="(item, idx) in advantages" :key="idx">
-        <el-icon :size="36" class="advantage-icon">
-          <component :is="item.icon" />
-        </el-icon>
-        <div class="advantage-label">{{ item.label }}</div>
+    <div class="section-en">SERVICES</div>
+    <p class="section-desc">
+      淘鱼科技拥有这优秀的开发团队我们提供APP开发的一体化解决方案，让您的项目从构念到产品快速启动，轻松落地！
+    </p>
+    <div class="advantage-container">
+      <!-- 中心点 -->
+      <div class="center-point"></div>
+
+      <!-- 五个优势点 -->
+      <div class="advantage-item top-left">
+        <div class="icon-box">
+          <!-- TODO: 技术图标 -->
+          <img src="/advantage/1.png" alt="技术" />
+        </div>
+        <p class="advantage-text">以技术为核心，专一专注开发行业</p>
+      </div>
+
+      <div class="advantage-item top-right">
+        <div class="icon-box">
+          <img src="/advantage/1.png" alt="服务" />
+        </div>
+        <p class="advantage-text">没有套路，技术人员直接对接</p>
+      </div>
+
+      <div class="advantage-item bottom-left">
+        <div class="icon-box">
+          <img src="/advantage/1.png" alt="真诚" />
+        </div>
+        <p class="advantage-text">真诚服务，不为了开发而开发</p>
+      </div>
+
+      <div class="advantage-item bottom-right">
+        <div class="icon-box">
+          <img src="/advantage/1.png" alt="诚信" />
+        </div>
+        <p class="advantage-text">诚信无价，不辜负每一份信任</p>
+      </div>
+
+      <div class="advantage-item bottom-center">
+        <div class="icon-box">
+          <img src="/advantage/1.png" alt="共赢" />
+        </div>
+        <p class="advantage-text">共同发展，与客户共同成长</p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { User, Star, Service, Coin, Connection, Finished } from '@element-plus/icons-vue'
-const advantages = [
-  { icon: User, label: '以客户为核心，一对一专属对接' },
-  { icon: Service, label: '高效响应，7x24小时技术支持' },
-  { icon: Star, label: '经验丰富，技术人员定期培训' },
-  { icon: Coin, label: '安全合规，服务人员层层筛选' },
-  { icon: Connection, label: '流程透明，客户全程可视化' },
-  { icon: Finished, label: '进度直观，与客户高效协作' },
-]
 </script>
 
 <style lang="scss" scoped>
 @use '../styles/variables.scss' as *;
+
 .advantage-section {
   width: 100%;
-  background: #f8faff;
-  padding: 64px 0 48px 0;
+  padding: 80px 0;
+  background: #f5f7fa;
   text-align: center;
+
   .section-title {
-    font-size: 32px;
+    font-size: 36px;
     color: $color-secondary;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 14px;
   }
+
   .section-en {
-    font-size: 18px;
-    color: $color-dark;
-    opacity: 0.7;
-    margin-bottom: 32px;
+    font-size: 20px;
+    color: $color-secondary;
+    opacity: 0.6;
+    margin-bottom: 24px;
   }
-  .advantage-circle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 48px 64px;
-    max-width: 900px;
+
+  .section-desc {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: $font-size-text;
+    line-height: 1.8;
+    color: $color-dark;
+    opacity: 0.8;
+  }
+
+  .advantage-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
     margin: 0 auto;
+
+    // 中心点
+    .center-point {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      background: $color-primary;
+      border-radius: 50%;
+      box-shadow: 0 0 0 8px rgba($color-primary, 0.1);
+    }
+
+    // 优势项通用样式
     .advantage-item {
-      width: 180px;
+      position: absolute;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      .advantage-icon {
-        color: $color-primary;
-        margin-bottom: 12px;
+      gap: 16px;
+
+      .icon-box {
+        width: 80px;
+        height: 80px;
+        background: $color-primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba($color-primary, 0.2);
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+        }
       }
-      .advantage-label {
+
+      .advantage-text {
         font-size: 18px;
         color: $color-dark;
-        opacity: 0.85;
+        text-align: left;
+        max-width: 200px;
         line-height: 1.5;
       }
     }
+
+    // 定位每个优势项
+    .top-left {
+      top: 20%;
+      left: 10%;
+    }
+
+    .top-right {
+      top: 20%;
+      right: 10%;
+    }
+
+    .bottom-left {
+      bottom: 30%;
+      left: 5%;
+    }
+
+    .bottom-right {
+      bottom: 30%;
+      right: 5%;
+    }
+
+    .bottom-center {
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    // 添加连接线效果
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      border: 2px dashed rgba($color-primary, 0.2);
+      border-radius: 50%;
+    }
   }
 }
-</style> 
+</style>
