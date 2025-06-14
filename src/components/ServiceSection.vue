@@ -1,7 +1,7 @@
 <template>
   <section class="service-section">
     <h2 class="section-title">我们的服务</h2>
-    <div class="section-en">SERVICES</div>
+    <div class="section-en">—— SERVICES ——</div>
     <p class="section-desc">
       淘鱼科技近几年APP外包开发经验，为企业提供专业的APP软件开发、电商平台开发、高端网站制作、小程序商城开发等服务，服务企业超过100家
     </p>

@@ -1,7 +1,7 @@
 <template>
   <section class="case-section">
     <h2 class="section-title">案例展示</h2>
-    <div class="section-en">CASE PRESENTATION</div>
+    <div class="section-en">—— CASE PRESENTATION ——</div>
     <p class="section-desc">
       淘鱼科技近有这优秀的开发团队我们提供APP开发的一体化解决方案，让您的项目从构念到产品快速启动、轻松落地！
     </p>

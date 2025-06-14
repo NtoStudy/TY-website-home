@@ -12,7 +12,6 @@
           </div>
         </div>
       </div>
-      <!-- 轮播指示器 -->
       <div class="banner-indicators">
         <span
           v-for="(_, index) in bannerSlides"
@@ -24,7 +23,7 @@
     </section>
     <section class="about">
       <h2 class="about-title">关于我们</h2>
-      <div class="about-en">ABOUT US</div>
+      <div class="about-en">—— ABOUT US ——</div>
     </section>
     <AboutSection />
     <AdvantageSection />
@@ -240,7 +239,7 @@ onUnmounted(() => {
     }
     .about-en {
       font-size: 20px;
-      color: $color-dark;
+      color: $color-secondary;
       letter-spacing: 2px;
       opacity: 0.7;
     }
