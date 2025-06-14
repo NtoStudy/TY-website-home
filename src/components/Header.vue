@@ -1,18 +1,15 @@
 <template>
   <header class="header">
     <div class="header-top">
-      <span><i class="icon-location"></i> 欢迎来到淘鱼科技有限公司</span>
+      <span>欢迎来到淘鱼科技有限公司</span>
       <div class="header-actions">
         <span class="hotline">
-          <i class="icon-phone"></i>
           开发咨询热线：400-808-6367
         </span>
         <button class="login">
-          <i class="icon-user"></i>
           登录
         </button>
         <button class="register">
-          <i class="icon-user-plus"></i>
           注册
         </button>
       </div>
@@ -24,23 +21,18 @@
       </div>
       <ul class="nav-list">
         <li class="nav-item active">
-          <i class="icon-home"></i>
           首页
         </li>
         <li class="nav-item">
-          <i class="icon-service"></i>
           服务项目
         </li>
         <li class="nav-item">
-          <i class="icon-case"></i>
           经典案例
         </li>
         <li class="nav-item">
-          <i class="icon-info"></i>
           关于淘鱼
         </li>
         <li class="nav-item">
-          <i class="icon-contact"></i>
           联系我们
         </li>
       </ul>
@@ -49,6 +41,8 @@
 </template>
 
 <script setup>
+
+// 不需要额外引入
 // 不需要额外引入
 </script>
 
@@ -120,7 +114,7 @@
         margin-left: 8px;
         display: flex;
         align-items: center;
-        
+
         &:hover {
           opacity: 0.9;
         }
@@ -169,7 +163,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        
+
         i {
           font-size: 18px;
         }
