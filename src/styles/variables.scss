@@ -1,0 +1,32 @@
+// 主题色
+$color-primary: #5b9df8;
+$color-secondary: #3b72c4;
+$color-dark: #3f3f3f;
+$color-link: #3b72c4;
+
+// 布局尺寸
+$main-width: 1200px;  // 主体设计宽度
+$screen-width: 1440px;  // 分辨率宽度
+$screen-height: 900px;  // 分辨率高度
+
+// 导航高度
+$nav-height-primary: 64px;    // 一级导航高度(大部分系统)
+$nav-height-secondary: 48px;  // 二级导航高度(大部分系统)
+$nav-height-primary-show: 80px;    // 一级导航高度(展示类页面)
+$nav-height-secondary-show: 56px;  // 二级导航高度(展示类页面)
+$nav-width: 200px;  // 侧边导航宽度基数
+
+// 字体
+$font-family: 'PingFang SC', '苹方', Arial, sans-serif;
+
+// 字号
+$font-size-nav: 20px;      // 导航栏文字
+$font-size-title: 48px;    // 标题文字
+$font-size-text: 20px;     // 正文文字
+$font-size-subtitle: 24px; // 辅助标题
+$font-size-auxiliary: 18px; // 辅助文字
+
+// 行高和间距
+$line-height-base: 1.5;     // 基础行高
+$line-height-large: 2;      // 段落行高
+$paragraph-spacing: 2.5;    // 段落间距

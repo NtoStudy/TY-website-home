@@ -1,0 +1,36 @@
+@use 'normalize.css';
+@use 'variables' as *;
+
+html {
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f8faff;
+  color: $color-dark;
+  line-height: $line-height-base;
+  font-size: $font-size-text;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+// 统一标题字体
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+
+// 统一按钮字体
+button, input, select, textarea {
+  font-family: inherit;
+}
