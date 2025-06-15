@@ -74,7 +74,6 @@
       <!-- 全渠道电商营销 -->
       <div class="service-card">
         <div class="icon-wrapper">
-          <!-- TODO: 电商图标 -->
           <img src="/service/1.png" alt="全渠道电商营销" />
         </div>
         <h3 class="card-title">全渠道电商营销</h3>
@@ -127,7 +126,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    max-width: 1200px;
+    max-width: $main-width;
     margin: 0 auto;
     padding: 0 20px;
   }

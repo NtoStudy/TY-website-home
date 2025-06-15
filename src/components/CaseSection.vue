@@ -121,7 +121,6 @@ const prevSlide = () => {
   .case-container {
     position: relative;
     background-image: url("/bbgg.png");
-    max-width: 1440px;
     margin: 0 auto;
     height: 600px;
     overflow: hidden;

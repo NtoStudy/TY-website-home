@@ -58,7 +58,7 @@
 .advantage-section {
   width: 100%;
   padding: 80px 0;
-  background: #f5f7fa;
+  background: $home-bg;
   text-align: center;
 
   .section-title {
@@ -86,7 +86,7 @@
 
   .advantage-container {
     position: relative;
-    width: 800px;
+    width: $main-width;
     height: 600px;
     margin: 0 auto;
 

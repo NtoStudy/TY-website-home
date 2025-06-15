@@ -89,7 +89,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('//TODO: 背景装饰图案');
     background-size: cover;
     background-position: center;
     opacity: 0.05;
@@ -120,7 +119,7 @@
   }
 
   .partner-container {
-    max-width: 1200px;
+    max-width: $main-width;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -171,42 +170,5 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .partner-section {
-    .partner-container {
-      padding: 0 40px;
-    }
 
-    .partner-row {
-      gap: 20px;
-    }
-
-    .partner-item {
-      max-width: 180px;
-      height: 70px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .partner-section {
-    .partner-row {
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .partner-item {
-      flex: 0 0 calc(33.33% - 10px);
-      max-width: none;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .partner-section {
-    .partner-item {
-      flex: 0 0 calc(50% - 7.5px);
-    }
-  }
-}
 </style>

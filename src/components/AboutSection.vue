@@ -1,5 +1,7 @@
 <template>
   <section class="about-section">
+    <h2 class="about-title">关于我们</h2>
+    <div class="about-en">—— ABOUT US ——</div>
     <div class="about-content">
       <div class="about-info">
         <h2 class="about-title">淘鱼科技有限公司</h2>
@@ -47,17 +49,36 @@
   background: #f5f7fa;
   padding: 64px 0 48px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .about-title {
+    font-size: 36px;
+    color: $color-secondary;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .about-en {
+    font-size: 20px;
+    color: $color-secondary;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 32px;
+    text-align: center;
+  }
 
   .about-content {
     width: $main-width;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 48px;
+    gap: 40px;
 
     .about-info {
-      flex: 1;
+      flex: 3;
 
       .about-title {
         font-size: 32px;
@@ -98,7 +119,7 @@
     }
 
     .about-img {
-      flex: 1;
+      flex: 2;
       display: flex;
       justify-content: center;
 
