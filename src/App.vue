@@ -13,7 +13,7 @@ import Footer from './components/Footer.vue'
 
 <style lang="scss">
 @use './styles/variables.scss' as *;
-@import './styles/reset.scss';
+@use './styles/reset.scss';
 
 // 添加全局盒模型设置
 * {

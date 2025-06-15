@@ -84,6 +84,7 @@ const prevSlide = () => {
 
 <style lang="scss" scoped>
 @use '../styles/variables.scss' as *;
+@use "sass:color";
 
 .case-section {
   width: 100%;
@@ -261,7 +262,7 @@ const prevSlide = () => {
           transition: background-color 0.3s;
 
           &:hover {
-            background-color: darken($color-primary, 10%);
+            background-color: color.adjust($color-primary, $lightness: -10%);
           }
         }
       }
