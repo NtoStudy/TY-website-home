@@ -4,9 +4,9 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div class="app-container">
+  <div class="app">
     <Header />
-    <router-view />
+    <router-view></router-view>
     <Footer />
   </div>
 </template>
@@ -28,7 +28,7 @@ html, body {
   overflow-x: hidden; // 防止水平滚动
 }
 
-.app-container {
+.app {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -40,6 +40,14 @@ html, body {
     flex: 1;
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+.mobile-only {
+  display: none;
+  
+  @include respond-to(md) {
+    display: block;
   }
 }
 </style>

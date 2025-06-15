@@ -28,19 +28,19 @@ $nav-width: 200px;  // 侧边导航宽度基数
 // 字体
 $font-family: 'PingFang SC', '苹方', Arial, sans-serif;
 
-// 字号 - 响应式
-$font-size-nav: clamp(16px, 2vw, 20px);      // 导航栏文字
-$font-size-title: clamp(24px, 4vw, 48px);    // 标题文字
-$font-size-text: clamp(14px, 1.5vw, 20px);     // 正文文字
-$font-size-subtitle: clamp(18px, 2.5vw, 24px); // 辅助标题
-$font-size-auxiliary: clamp(12px, 1.2vw, 18px); // 辅助文字
+// 字号 - 恢复原始桌面端尺寸
+$font-size-nav: 20px;      // 导航栏文字
+$font-size-title: 48px;    // 标题文字
+$font-size-text: 20px;     // 正文文字
+$font-size-subtitle: 24px; // 辅助标题
+$font-size-auxiliary: 18px; // 辅助文字
 
 // 行高和间距
 $line-height-base: 1.5;     // 基础行高
 $line-height-large: 2;      // 段落行高
 $paragraph-spacing: 2.5;    // 段落间距
 
-// 响应式混合器
+// 响应式混合器 - 保留用于移动端
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
     @media (max-width: $breakpoint-sm) { @content; }

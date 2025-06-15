@@ -79,9 +79,22 @@ onUnmounted(() => {
 .banner {
   width: 100%;
   background-image: url("/home-bg.png");
-  height: 600px;
+  height: 800px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  
+  @include respond-to(lg) {
+    height: 500px;
+  }
+  
+  @include respond-to(md) {
+    height: 400px;
+  }
+  
+  @include respond-to(sm) {
+    height: 300px;
+  }
 
   .banner-slider {
     width: 100%;
@@ -131,46 +144,118 @@ onUnmounted(() => {
       z-index: 2;
       max-width: $main-width;
       margin: 0 auto;
-      padding: 120px calc((100% - $main-width) / 2);
+      padding: 180px 16px;
       color: #fff;
+      box-sizing: border-box;
+      
+      @include respond-to(lg) {
+        padding: 100px 16px;
+      }
+      
+      @include respond-to(md) {
+        padding: 80px 16px;
+      }
+      
+      @include respond-to(sm) {
+        padding: 60px 16px;
+      }
 
       .main-title {
-        font-size: $font-size-title;
+        font-size: 64px;
         font-weight: bold;
-        margin-bottom: 24px;
+        margin-bottom: 30px;
         letter-spacing: 4px;
-        line-height: $line-height-base;
+        line-height: 1.2;
+        
+        @include respond-to(lg) {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+        
+        @include respond-to(md) {
+          font-size: 28px;
+          margin-bottom: 16px;
+          letter-spacing: 2px;
+        }
+        
+        @include respond-to(sm) {
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
       }
 
       .slogan {
-        font-size: $font-size-subtitle;
+        font-size: 36px;
         font-weight: 600;
-        margin-bottom: 12px;
-        line-height: $line-height-base;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        
+        @include respond-to(lg) {
+          font-size: 22px;
+        }
+        
+        @include respond-to(md) {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        
+        @include respond-to(sm) {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
       }
 
       .desc {
-        font-size: $font-size-text;
-        margin-bottom: 32px;
-        line-height: $line-height-base;
+        font-size: 24px;
+        margin-bottom: 40px;
+        line-height: 1.6;
         opacity: 0.9;
+        
+        @include respond-to(lg) {
+          font-size: 18px;
+          margin-bottom: 28px;
+        }
+        
+        @include respond-to(md) {
+          font-size: 16px;
+          margin-bottom: 24px;
+        }
+        
+        @include respond-to(sm) {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
       }
 
       .banner-btn {
         color: #ffffff;
         border: none;
         background: rgba(59, 114, 196, 0.8);
-        border-radius: 6px;
-        font-size: $font-size-subtitle;
-        padding: 12px 36px;
+        border-radius: 8px;
+        font-size: 24px;
+        padding: 16px 48px;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        
+        @include respond-to(lg) {
+          font-size: 20px;
+          padding: 10px 32px;
+        }
+        
+        @include respond-to(md) {
+          font-size: 18px;
+          padding: 8px 28px;
+        }
+        
+        @include respond-to(sm) {
+          font-size: 16px;
+          padding: 6px 24px;
+        }
 
         &:hover {
-          background: $color-secondary;
-          color: #fff;
+          background: rgba(59, 114, 196, 1);
           transform: translateY(-2px);
           box-shadow: 0 6px 16px rgba(0,0,0,0.15);
         }
@@ -186,6 +271,16 @@ onUnmounted(() => {
     display: flex;
     gap: 12px;
     z-index: 3;
+    
+    @include respond-to(md) {
+      bottom: 30px;
+      gap: 10px;
+    }
+    
+    @include respond-to(sm) {
+      bottom: 20px;
+      gap: 8px;
+    }
 
     span {
       width: 32px;
@@ -194,10 +289,28 @@ onUnmounted(() => {
       border-radius: 2px;
       cursor: pointer;
       transition: all 0.3s ease;
+      
+      @include respond-to(md) {
+        width: 24px;
+        height: 3px;
+      }
+      
+      @include respond-to(sm) {
+        width: 20px;
+        height: 3px;
+      }
 
       &.active {
         background: #fff;
         width: 48px;
+        
+        @include respond-to(md) {
+          width: 36px;
+        }
+        
+        @include respond-to(sm) {
+          width: 30px;
+        }
       }
 
       &:hover {

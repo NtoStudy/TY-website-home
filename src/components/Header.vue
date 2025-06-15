@@ -1,4 +1,4 @@
-  <template>
+<template>
   <header class="header">
     <div class="header-top" >
       <span class="welcome-text">欢迎来到淘鱼科技有限公司</span>
@@ -25,7 +25,7 @@
 
       <!-- 移动端菜单按钮 -->
       <div class="mobile-menu-toggle" @click="toggleMobileMenu">
-        <div class="hamburger" :class="{ 'active': mobileMenuVisible }">
+        <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -42,18 +42,23 @@
         </li>
       </ul>
     </nav>
+    <MobileNav ref="mobileNav" />
   </header>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import MobileNav from './mobile/MobileNav.vue'
 
 // 控制移动端菜单显示
 const mobileMenuVisible = ref(false)
 
+const mobileNav = ref(null)
+
 // 切换移动端菜单
 const toggleMobileMenu = () => {
   mobileMenuVisible.value = !mobileMenuVisible.value
+  mobileNav.value?.toggleMenu()
 }
 
 // 导航菜单项

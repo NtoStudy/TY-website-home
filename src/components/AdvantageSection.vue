@@ -1,18 +1,19 @@
 <template>
   <section class="advantage-section">
     <h2 class="section-title">我们的优势</h2>
-    <div class="section-en">—— SERVICES ——</div>
+    <div class="section-en">—— ADVANTAGE ——</div>
     <p class="section-desc">
       淘鱼科技拥有这优秀的开发团队我们提供APP开发的一体化解决方案，让您的项目从构念到产品快速启动，轻松落地！
     </p>
-    <div class="advantage-container">
+
+    <!-- 桌面端优势展示 -->
+    <div class="advantage-container desktop-view">
       <!-- 中心点 -->
       <div class="center-point"></div>
 
       <!-- 五个优势点 -->
       <div class="advantage-item top-left">
         <div class="icon-box">
-          <!-- TODO: 技术图标 -->
           <img src="/advantage/1.png" alt="技术" />
         </div>
         <p class="advantage-text">以技术为核心，专一专注开发行业</p>
@@ -46,6 +47,51 @@
         <p class="advantage-text">共同发展，与客户共同成长</p>
       </div>
     </div>
+
+    <!-- 移动端优势展示 -->
+    <div class="mobile-view">
+      <div class="mobile-advantages">
+        <!-- 第一行 - 1个 -->
+        <div class="advantage-row">
+          <div class="mobile-advantage-item">
+            <div class="mobile-text">
+             
+              <p>以技术为核心，专一专注开发行业 </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 第二行 - 2个 -->
+        <div class="advantage-row">
+          <div class="mobile-advantage-item">
+            <div class="mobile-text">
+              <p>技术人员一对一对接</p>
+            </div>
+          </div>
+          
+          <div class="mobile-advantage-item">
+            <div class="mobile-text">
+              <p>坚持以诚信为本</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 第三行 - 2个 -->
+        <div class="advantage-row">
+          <div class="mobile-advantage-item">
+            <div class="mobile-text">
+              <p>真诚服务，没有套路</p>
+            </div>
+          </div>
+          
+          <div class="mobile-advantage-item">
+            <div class="mobile-text">
+              <p>与顾客共同发展</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -60,16 +106,25 @@
   padding: 80px 0;
   background: $home-bg;
   text-align: center;
+  box-sizing: border-box;
+
+  @include respond-to(md) {
+    padding: 50px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 0;
+  }
 
   .section-title {
-    font-size: 36px;
+    font-size: clamp(24px, 5vw, 36px);
     color: $color-secondary;
     font-weight: bold;
     margin-bottom: 14px;
   }
 
   .section-en {
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     color: $color-secondary;
     opacity: 0.6;
     margin-bottom: 24px;
@@ -82,13 +137,30 @@
     line-height: 1.8;
     color: $color-dark;
     opacity: 0.8;
+    padding: 0 16px;
+    box-sizing: border-box;
+    
+    @include respond-to(md) {
+      display: none; // 在移动端隐藏
+    }
   }
 
+  // 桌面端优势展示
   .advantage-container {
     position: relative;
-    width: $main-width;
+    width: 100%;
+    max-width: $main-width;
     height: 600px;
     margin: 0 auto;
+    box-sizing: border-box;
+
+    @include respond-to(lg) {
+      height: 500px;
+    }
+
+    @include respond-to(md) {
+      display: none; // 在移动端隐藏
+    }
 
     // 中心点
     .center-point {
@@ -120,15 +192,25 @@
         justify-content: center;
         box-shadow: 0 4px 12px rgba($color-primary, 0.2);
 
+        @include respond-to(lg) {
+          width: 60px;
+          height: 60px;
+        }
+
         img {
           width: 40px;
           height: 40px;
           object-fit: contain;
+
+          @include respond-to(lg) {
+            width: 30px;
+            height: 30px;
+          }
         }
       }
 
       .advantage-text {
-        font-size: 18px;
+        font-size: clamp(14px, 2vw, 18px);
         color: $color-dark;
         text-align: left;
         max-width: 200px;
@@ -140,11 +222,19 @@
     .top-left {
       top: 20%;
       left: 10%;
+
+      @include respond-to(lg) {
+        left: 5%;
+      }
     }
 
     .top-right {
       top: 20%;
       right: 10%;
+
+      @include respond-to(lg) {
+        right: 5%;
+      }
     }
 
     .bottom-left {
@@ -174,6 +264,85 @@
       height: 90%;
       border: 2px dashed rgba($color-primary, 0.2);
       border-radius: 50%;
+    }
+  }
+
+  // 移动端样式
+  .mobile-view {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    @include respond-to(md) {
+      display: block;
+    }
+
+    .mobile-advantages {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      
+      .advantage-row {
+        display: grid;
+        gap: 15px;
+        
+        &:first-child {
+          grid-template-columns: 1fr;
+        }
+        
+        &:not(:first-child) {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      
+      .mobile-advantage-item {
+        position: relative;
+        height: 120px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: url('/bbgg.png') center center/cover no-repeat;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7));
+        }
+        
+        .mobile-text {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          padding: 15px;
+          color: #fff;
+          z-index: 1;
+          
+          h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            
+            @include respond-to(sm) {
+              font-size: 15px;
+            }
+          }
+          
+          p {
+            font-size: 14px;
+            opacity: 0.9;
+            
+            @include respond-to(sm) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
     }
   }
 }
