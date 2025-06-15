@@ -7,6 +7,12 @@ $color-secondary: #3b72c4;
 $color-dark: #3f3f3f;
 $color-link: #3b72c4;
 
+// 响应式断点
+$breakpoint-sm: 576px;   // 小型手机
+$breakpoint-md: 768px;   // 平板
+$breakpoint-lg: 992px;   // 小型笔记本
+$breakpoint-xl: 1200px;  // 桌面显示器
+
 // 布局尺寸
 $main-width: 1200px;  // 主体设计宽度
 $screen-width: 1440px;  // 分辨率宽度
@@ -22,14 +28,60 @@ $nav-width: 200px;  // 侧边导航宽度基数
 // 字体
 $font-family: 'PingFang SC', '苹方', Arial, sans-serif;
 
-// 字号
-$font-size-nav: 20px;      // 导航栏文字
-$font-size-title: 48px;    // 标题文字
-$font-size-text: 20px;     // 正文文字
-$font-size-subtitle: 24px; // 辅助标题
-$font-size-auxiliary: 18px; // 辅助文字
+// 字号 - 响应式
+$font-size-nav: clamp(16px, 2vw, 20px);      // 导航栏文字
+$font-size-title: clamp(24px, 4vw, 48px);    // 标题文字
+$font-size-text: clamp(14px, 1.5vw, 20px);     // 正文文字
+$font-size-subtitle: clamp(18px, 2.5vw, 24px); // 辅助标题
+$font-size-auxiliary: clamp(12px, 1.2vw, 18px); // 辅助文字
 
 // 行高和间距
 $line-height-base: 1.5;     // 基础行高
 $line-height-large: 2;      // 段落行高
 $paragraph-spacing: 2.5;    // 段落间距
+
+// 响应式混合器
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// 容器混合器
+@mixin container {
+  width: 100%;
+  max-width: $main-width;
+  margin: 0 auto;
+  padding: 0 16px;
+  
+  @include respond-to(md) {
+    padding: 0 12px;
+  }
+  
+  @include respond-to(sm) {
+    padding: 0 8px;
+  }
+}
+
+// 弹性布局混合器
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 文本溢出处理混合器
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

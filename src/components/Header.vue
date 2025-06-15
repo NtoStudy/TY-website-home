@@ -1,41 +1,20 @@
-<template>
+  <template>
   <header class="header">
-    <div class="header-top">
-      <span>欢迎来到淘鱼科技有限公司</span>
+    <div class="header-top" >
+      <span class="welcome-text">欢迎来到淘鱼科技有限公司</span>
       <div class="header-actions">
         <span class="hotline">
-          <span style="margin-right: 8px">
-            <svg width="22" height="22" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path
-    d="M17.3334 10.1111C17.68 10.5156 18.0267 10.92 18.3734 11.2667C18.6623 11.6133 19.0089 12.0178 19.4134 12.48C19.8178 12.9422 20.1645 13.3467 20.5689 13.8089C21.0889 14.3867 21.4934 14.9067 21.84 15.3689C22.1867 15.8311 22.4178 16.2356 22.6489 16.64C22.8223 17.0444 22.9956 17.3911 23.0534 17.68C23.1112 18.0267 23.1689 18.3156 23.1689 18.6622V20.1644C23.1689 20.6267 23.1112 21.0311 22.9378 21.4356C22.7645 21.7822 22.5912 22.1289 22.3023 22.4178C22.0134 22.7067 21.7245 22.88 21.3778 23.0533C21.0312 23.2267 20.6845 23.2844 20.28 23.2844H5.95116C5.54672 23.2844 5.14227 23.2267 4.73783 23.0533C4.33338 22.9378 4.0445 22.7067 3.75561 22.4756C3.46672 22.2444 3.23561 21.8978 3.06227 21.5511C2.88894 21.2044 2.77339 20.8 2.77339 20.3378V18.5467C2.77339 18.2 2.83116 17.7956 2.88894 17.5067C2.94672 17.16 3.06227 16.8133 3.29339 16.4667C3.46672 16.0044 3.69783 15.6578 4.0445 15.1956C4.39116 14.7911 4.79561 14.3289 5.25783 13.8089C5.66227 13.3467 6.06672 12.9422 6.52894 12.48C6.93338 12.0178 7.33783 11.6133 7.6845 11.2667C8.08894 10.8622 8.49338 10.4578 8.84005 10.0533H17.3334V10.1111ZM13.0001 18.8933C13.4045 18.8933 13.8089 18.8356 14.1556 18.6622C14.5023 18.4889 14.8489 18.3156 15.08 18.0267C15.3689 17.7378 15.5423 17.4489 15.7156 17.1022C15.8889 16.7556 15.9467 16.3511 15.9467 15.9467C15.9467 15.5422 15.8889 15.1378 15.7156 14.7911C15.5423 14.4444 15.3689 14.0978 15.08 13.8667C14.7912 13.5778 14.5023 13.4044 14.1556 13.2311C13.8089 13.0578 13.4045 13 13.0001 13C12.5956 13 12.1912 13.0578 11.8445 13.2311C11.4978 13.4044 11.1512 13.5778 10.92 13.8667C10.6312 14.1556 10.4578 14.4444 10.2845 14.7911C10.1112 15.1378 10.0534 15.5422 10.0534 15.9467C10.0534 16.3511 10.1112 16.7556 10.2845 17.1022C10.4578 17.4489 10.6312 17.7956 10.92 18.0267C11.2089 18.3156 11.4978 18.4889 11.8445 18.6622C12.1912 18.8356 12.5956 18.8933 13.0001 18.8933ZM24.6134 7.28V8.72444C24.6134 9.12889 24.4978 9.47555 24.2089 9.76444C23.92 10.0533 23.5734 10.1689 23.1689 10.1689H20.28C19.8756 10.1689 19.5289 10.0533 19.24 9.76444C18.9512 9.47555 18.8356 9.12889 18.8356 8.72444V7.28H7.1645V8.72444C7.1645 9.12889 7.04894 9.47555 6.76005 9.76444C6.47116 10.0533 6.1245 10.1689 5.72005 10.1689H2.83116C2.42672 10.1689 2.08005 10.0533 1.79116 9.76444C1.50227 9.47555 1.38672 9.12889 1.38672 8.72444V7.22222C1.38672 7.04889 1.4445 6.87555 1.50227 6.76L1.84894 6.41333C1.9645 6.29777 2.13783 6.18222 2.31116 6.12444C2.4845 6.06666 2.65783 5.95111 2.83116 5.83555C3.0045 5.72 3.40894 5.54666 3.98672 5.2C4.5645 4.91111 5.31561 4.56444 6.24005 4.21777C7.1645 3.87111 8.14672 3.58222 9.30227 3.29333C10.4578 3.00444 11.6712 2.88889 13.0001 2.88889C14.5023 2.88889 15.8312 3.00444 16.9867 3.29333C18.1423 3.58222 19.1823 3.87111 20.0489 4.21777C20.9156 4.56444 21.6089 4.91111 22.1289 5.2C22.6489 5.48889 22.9956 5.72 23.1689 5.83555C23.3423 5.95111 23.5156 6.06666 23.6889 6.12444C23.8623 6.18222 24.0356 6.29777 24.1512 6.41333L24.4978 6.76C24.5556 6.87555 24.6134 7.04889 24.6134 7.28Z"
-    fill="white"/>
-</svg>
-          </span>
 
           开发咨询热线：400-808-6367
         </span>
         <button class="login">
-           <span style="margin-right: 8px">
-          <svg width="22" height="22" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M7.58334 7.58334C7.58334 8.65465 7.90103 9.70191 8.49622 10.5927C9.09141 11.4834 9.93738 12.1777 10.9271 12.5877C11.9169 12.9977 13.006 13.1049 14.0568 12.8959C15.1075 12.6869 16.0726 12.171 16.8302 11.4135C17.5877 10.656 18.1036 9.69081 18.3126 8.64008C18.5216 7.58935 18.4143 6.50024 18.0044 5.51047C17.5944 4.5207 16.9001 3.67474 16.0093 3.07954C15.1186 2.48435 14.0713 2.16667 13 2.16667C12.2887 2.16667 11.5843 2.30678 10.9271 2.57899C10.27 2.8512 9.67283 3.25019 9.16985 3.75318C8.66686 4.25616 8.26788 4.85329 7.99566 5.51047C7.72345 6.16765 7.58334 6.87201 7.58334 7.58334ZM17.94 14.1917H17.4958C17.3116 14.1962 17.1305 14.2406 16.965 14.3217C16.965 14.3217 16.6075 14.5275 16.2825 14.6683C15.2529 15.098 14.1482 15.3189 13.0325 15.3183C11.9161 15.326 10.81 15.1048 9.78251 14.6683C9.45751 14.5275 9.08918 14.3217 9.08918 14.3217C8.92625 14.2337 8.74349 14.1889 8.55834 14.1917H8.09251C7.15555 14.3627 6.27811 14.7712 5.5441 15.3782C4.81008 15.9851 4.24401 16.7702 3.90001 17.6583C3.4688 18.7443 3.24821 19.9024 3.25001 21.0708C3.26876 21.2411 3.32764 21.4045 3.4218 21.5477C3.51596 21.6908 3.64272 21.8095 3.79168 21.8942C3.79168 21.8942 6.82501 23.8333 13 23.8333C19.175 23.8333 22.2083 21.8942 22.2083 21.8942C22.3587 21.8085 22.4863 21.6881 22.5806 21.5429C22.6748 21.3978 22.7329 21.2322 22.75 21.06C22.7618 19.9103 22.5483 18.7694 22.1217 17.7017C21.7918 16.7982 21.233 15.9957 20.5 15.3729C19.767 14.7501 18.8849 14.3281 17.94 14.1483V14.1917Z"
-                fill="white"/>
-          </svg>
-           </span>
+
           登录
         </button>
         <button class="register">
-           <span style="margin-right: 8px">
 
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M19.4989 18.6294C19.4979 18.5139 19.4742 18.3997 19.4291 18.2934C19.3839 18.187 19.3183 18.0906 19.2359 18.0096C19.1535 17.9286 19.056 17.8647 18.9489 17.8214C18.8418 17.7781 18.7272 17.7563 18.6117 17.7573H0.88725C0.771729 17.7563 0.657143 17.7781 0.550034 17.8214C0.442925 17.8647 0.345391 17.9286 0.263001 18.0096C0.180611 18.0906 0.11498 18.187 0.0698539 18.2934C0.024728 18.3997 0.000991576 18.5139 0 18.6294C0 19.1093 0.3965 19.5004 0.88725 19.5004H18.6149C18.8477 19.5019 19.0715 19.411 19.2374 19.2478C19.4033 19.0845 19.4977 18.8622 19.5 18.6294H19.4989ZM17.6507 4.1756C17.6486 4.17343 17.6443 4.17127 17.6421 4.16693L13.7605 0.3536C13.4775 0.113652 13.1151 -0.0121033 12.7443 0.000919033C12.3734 0.0139414 12.0208 0.164805 11.7552 0.424017C11.7531 0.426183 11.7509 0.430517 11.7466 0.432683L1.64992 10.3474C1.55322 10.4416 1.48008 10.5573 1.43642 10.6851C1.39275 10.8129 1.37979 10.9492 1.39858 11.0829V15.5268C1.39891 15.5707 1.40253 15.6145 1.40942 15.6579C1.41375 15.6882 1.42025 15.7153 1.42675 15.7434C1.45 15.825 1.48348 15.9032 1.52642 15.9763C1.53292 15.9893 1.54158 16.0002 1.55025 16.0132C1.63614 16.1379 1.75249 16.2386 1.88825 16.3057L1.91425 16.3187C2.02692 16.3696 2.15258 16.3999 2.28583 16.3999H6.9225C7.2085 16.3999 7.46417 16.2656 7.6245 16.0598L17.7461 6.11802C18.2227 5.54818 18.1902 4.70643 17.6507 4.1756Z"
-                fill="white"/>
-          </svg>
-            </span>
           注册
         </button>
-
       </div>
     </div>
     <nav class="navbar">
@@ -43,21 +22,23 @@
         <img src="/img.png" alt="logo" class="logo"/>
         <span class="company-name">淘鱼科技</span>
       </div>
-      <ul class="nav-list">
-        <li class="nav-item active">
-          首页
-        </li>
-        <li class="nav-item">
-          服务项目
-        </li>
-        <li class="nav-item">
-          经典案例
-        </li>
-        <li class="nav-item">
-          关于淘鱼
-        </li>
-        <li class="nav-item">
-          联系我们
+
+      <!-- 移动端菜单按钮 -->
+      <div class="mobile-menu-toggle" @click="toggleMobileMenu">
+        <div class="hamburger" :class="{ 'active': mobileMenuVisible }">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- 导航菜单 -->
+      <ul class="nav-list" :class="{ 'mobile-active': mobileMenuVisible }">
+        <li v-for="(item, index) in navItems"
+            :key="index"
+            class="nav-item"
+            :class="{ 'active': item.active }">
+          {{ item.name }}
         </li>
       </ul>
     </nav>
@@ -65,9 +46,24 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 
-// 不需要额外引入
-// 不需要额外引入
+// 控制移动端菜单显示
+const mobileMenuVisible = ref(false)
+
+// 切换移动端菜单
+const toggleMobileMenu = () => {
+  mobileMenuVisible.value = !mobileMenuVisible.value
+}
+
+// 导航菜单项
+const navItems = [
+  { name: '首页', active: true },
+  { name: '服务内容', active: false },
+  { name: '经典案例', active: false },
+  { name: '关于我们', active: false },
+  { name: '联系我们', active: false }
+]
 </script>
 
 <style lang="scss" scoped>
@@ -131,19 +127,29 @@
 
 .header {
   width: 100%;
+  box-sizing: border-box;
 
   .header-top {
     background: $color-secondary;
     color: #fff;
-    font-size: 14px;
+    font-size: $font-size-auxiliary;
     display: flex;
     height: 70px;
     justify-content: space-between;
     align-items: center;
     padding: 0 10vw;
+    box-sizing: border-box;
 
-    i {
-      vertical-align: middle;
+    @include respond-to(md) {
+      padding: 0 16px;
+      height: 50px;
+      width: 100%;
+    }
+
+    .welcome-text {
+      @include respond-to(md) {
+        display: none;
+      }
     }
 
     .header-actions {
@@ -151,23 +157,51 @@
       align-items: center;
       gap: 16px;
 
+      @include respond-to(md) {
+        gap: 8px;
+        width: 100%;
+        justify-content: space-between;
+      }
+
       .hotline {
         display: flex;
         align-items: center;
+
+        @include respond-to(md) {
+          font-size: 14px;
+
+          .icon {
+            svg {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
       }
 
       .login, .register {
         background: none;
         border: none;
         color: #fff;
-        font-size: 14px;
+        font-size: $font-size-auxiliary;
         cursor: pointer;
-        margin-left: 8px;
         display: flex;
         align-items: center;
+        padding: 0;
 
         &:hover {
           opacity: 0.9;
+        }
+
+        @include respond-to(md) {
+          font-size: 14px;
+
+          .icon {
+            svg {
+              width: 16px;
+              height: 16px;
+            }
+          }
         }
       }
 
@@ -183,9 +217,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
+    height: $nav-height-primary;
     padding: 0 10vw;
+    box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(91, 157, 248, 0.04);
+    position: relative;
+    width: 100%;
+
+    @include respond-to(md) {
+      padding: 0 16px;
+      height: 56px;
+    }
 
     .logo-area {
       display: flex;
@@ -195,19 +237,89 @@
         width: 64px;
         height: 64px;
         margin-right: 8px;
+
+        @include respond-to(md) {
+          width: 40px;
+          height: 40px;
+        }
       }
 
       .company-name {
-        font-size: 24px;
+        font-size: $font-size-subtitle;
         color: $color-secondary;
         font-weight: bold;
         letter-spacing: 2px;
+
+        @include respond-to(md) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    // 移动端菜单按钮
+    .mobile-menu-toggle {
+      display: none;
+      cursor: pointer;
+
+      @include respond-to(md) {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+
+      .hamburger {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        span {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $color-secondary;
+          transition: all 0.3s ease;
+        }
+
+        &.active {
+          span {
+            &:first-child {
+              transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:last-child {
+              transform: rotate(-45deg) translate(5px, -5px);
+            }
+          }
+        }
       }
     }
 
     .nav-list {
       display: flex;
       gap: 40px;
+
+      @include respond-to(md) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+
+        &.mobile-active {
+          display: flex;
+        }
+      }
 
       .nav-item {
         font-size: $font-size-nav;
@@ -216,9 +328,11 @@
         position: relative;
         display: flex;
         align-items: center;
+        padding: 8px 0;
 
-        i {
-          font-size: 18px;
+        @include respond-to(md) {
+          padding: 16px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         &.active,
@@ -236,6 +350,10 @@
           position: absolute;
           left: 20%;
           bottom: -8px;
+
+          @include respond-to(md) {
+            display: none;
+          }
         }
       }
     }
